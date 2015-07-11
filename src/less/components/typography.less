@@ -1,0 +1,61 @@
+/*_____ TYPOGRAPHY _____*/
+
+body
+{
+  font-family: @font-family-main;
+  background-color: @bg-color;
+}
+
+h1, h2, h3, h4
+{
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+h1
+{
+  font-size: @font-size-h1;
+}
+
+h2
+{
+  font-size: @font-size-h2;
+}
+
+h3
+{
+  font-size: @font-size-h3;
+}
+
+h4
+{
+  font-size: @font-size-h4;
+}
+
+p
+{
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+}
+
+a
+{
+	color: @warning-color;
+
+  &:hover,
+  &.hover
+  {
+      text-decoration: none;
+  }
+}
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+}

@@ -1,0 +1,60 @@
+/*_____ INTERACTIVE _____*/
+
+
+.tooltip
+{
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  min-height: 100px;
+  text-align: center;
+  margin-bottom: 1em;
+
+
+
+  &__popup
+  {
+    padding: 3px 3px 3px 15px;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 0;
+    background-color: @warning-color;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+
+    transition: margin-top .3s ease-out, opacity .3s ease ;
+
+
+    &:before
+    {
+      content: '';
+      position: absolute;
+      left: 45%;
+      top: -20px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid #fc6e51;
+    }
+  }
+
+  &__text
+  {
+    color:  #e86060;
+    text-decoration: none;
+
+    &:hover+.tooltip__popup {
+      display: block;
+      opacity: 1;
+      margin-top: 15px;
+    }
+  }
+
+}
+
+.visible_block
+{
+  display: block;
+  opacity: 1;
+  margin-top: 15px;
+}

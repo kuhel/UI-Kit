@@ -1,0 +1,73 @@
+/*_____ Forms _____*/
+
+
+.input--icon() {
+	font-family: 'FontAwesome';
+	position: absolute;
+	left: 75%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+form
+{
+	background-color: #fff;
+
+	input.input__txt
+	{
+  		border: solid 2px #eaeaea;
+  		border-radius: 6px;
+  		background-color: #fff;
+  		font-family: @font-family-main;
+  		padding: 10px;
+  		margin: 10px;
+  		font-size: @font-size-base;
+			font-weight: normal;
+			min-width:80%;
+			outline:none;
+
+			&:focus {
+				border: solid 2px #89c0d0;
+			}
+	}
+
+	.input
+	{
+		position: relative;
+
+
+
+		&.input__sucess
+		{
+			&:after
+			{
+			    .input--icon();
+
+			    color:@color-input-sucess;
+			    content: "\f00c";
+			}
+			input
+			{
+				border: solid 2px @color-input-sucess;
+			}
+		}
+
+		&.input__error
+		{
+			&:after
+			{
+					.input--icon();
+
+			    color:@color-input-error;
+			    content: "\f00d";
+			}
+
+			input
+			{
+				border: solid 2px @color-input-error;
+			}
+		}
+	}
+
+
+}

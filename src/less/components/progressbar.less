@@ -1,0 +1,54 @@
+/*_____ PROGRESSBAR _____*/
+
+.progress-bar__ui .ui-progressbar-value {
+	display:block !important;
+}
+
+
+.progress-bar-wrap {
+	padding: 20px 20px;
+
+	.progress-bar {
+
+		.ui-progressbar {
+	  		height: 10px;
+	  		background: #e6e9ed;
+	  		border-radius: 10px;
+		}
+		.ui-widget-header {
+			border: none;
+			background: #fc6e51;
+		}
+
+		.ui-progressbar-value {
+	  		margin: 0px;
+	  		height: 100%;
+	  		border-radius: 10px;
+		}
+
+		.ui-widget-content {
+	  		border: none;
+	  		background: #eeeeee ;
+		}
+
+		&__percent {	text-align: center;
+			color: #bfbfbf;
+		}
+
+		&__time {
+			overflow: hidden;
+		}
+
+		&__time-finish {
+			color: #aab2bd;
+			float: right;
+			font-size: 11px;
+		}
+
+		&__time-start {
+			color: #aab2bd;
+			float: left;
+			font-size: 11px;
+		}
+	}
+}

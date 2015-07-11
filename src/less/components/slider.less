@@ -1,0 +1,56 @@
+/*_____ SLIDES _____*/
+
+#slides {
+  position: relative;
+}
+
+.slides {
+
+  &__container {
+    width:550px;
+    height:340px;
+    border-radius: 6px;
+
+    &__control {
+      width:550px;
+      height:340px;
+      display:block;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 45%;
+    list-style: none;
+    bottom: -30px;
+
+
+    & .current a {
+    	background-color: @warning-color
+    }
+
+    & li {
+      display: inline-block;
+      margin: 0 5px;
+      & a {
+        font-size: 0;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: @color-pagination-slider;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__prev {
+    position: absolute;
+    left: 40%;
+    bottom: -36px;
+  }
+
+  &__next {
+    position: absolute;
+    left: 58%;
+    bottom: -36px;
+  }
+}

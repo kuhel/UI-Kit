@@ -1,0 +1,44 @@
+/*_____ TABS _____*/
+
+.tabs__menu {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  border-bottom: 1px solid @grey-line;
+  margin-bottom: 20px;
+
+
+  & .tabs__menu-item {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 30px;
+    border: 1px solid @grey-line;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    color:#000;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    top:1px;
+
+    &--active {
+      background:  @warning-color;
+      border:  1px solid @warning-color;
+      border-bottom:none;
+      color:#fff;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.tabs__article {
+    display: none;
+    list-style: none;
+
+  &--active {
+    display: block;
+  }
+}

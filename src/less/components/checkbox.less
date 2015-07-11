@@ -1,0 +1,238 @@
+/*_____ CHECKBOX _____*/
+
+.label-checkbox {
+    display: block;
+    padding: 5px;
+    position: relative;
+  }
+  input .switch {
+      display:none;
+  }
+
+  .switch {
+    & + label {
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #444;
+      cursor: pointer;
+    }
+
+    &:disabled + label {
+      color: #ccc;
+    }
+    & + label::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        height: 16px;
+        width: 30px;
+        left: 0;
+        border-radius: 10px;
+        margin: 0 5px 0 0;
+        background-color: @grey-checkbox;
+        transition: background-color .3s ease;
+    }
+
+    & + label::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 9px;
+      height: 14px;
+      width: 14px;
+      left: 0;
+      border-radius: 10px;
+      margin: 0 5px 0 0;
+      border: 1px solid @grey-checkbox;
+      background-color: #fff;
+      box-shadow: 0 0 3px 0 #ccc;
+      transition: left .3s ease-out;
+    }
+
+    &:checked + label::before {
+        background-color: @green-color;
+    }
+
+    &:checked + label::after {
+      left: 14px;
+    }
+
+    &:disabled + label::after {
+         background-color: @grey-disabled;
+    }
+  }
+    input[disabled="disabled"] + .label-checkbox__disabled{
+        color:@grey-checkbox;
+    }
+
+.radio-round-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 10px;
+  cursor: pointer;
+
+  &--disabled {
+    color: #eaeaea;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    & + span {
+      display: inline-block;
+      vertical-align: bottom;
+      position: relative;
+      padding-left: 22px;
+      font-size: 14px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 14px;
+        height: 14px;
+        border: 2px solid @grey-checkbox;
+        background-color: #fff;
+        border-radius: 8px;
+        transition: all .3s ease-out;
+      }
+
+      &:after {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        content: '';
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition-delay: .2s;
+        transition: all .3s ease-out;
+      }
+    }
+    &:checked + span {
+
+      &:before {
+        border: 2px solid @checkbox-color;
+
+      }
+      &:after {
+        background-color: @checkbox-color;
+      }
+    }
+  }
+}
+
+
+
+
+.checkbox-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 10px;
+  cursor: pointer;
+
+  font-size: 14px;
+
+  &--disabled {
+    color: #eaeaea;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    & + span {
+      display: inline-block;
+      position: relative;
+      padding-left: 22px;
+
+      &:before {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        content: '';
+        width: 14px;
+        height: 14px;
+        border: 2px solid @grey-checkbox;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: all .3s ease-out;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 3px;
+        content: '';
+        color: #fff;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: transparent;
+
+        font-family: 'FontAwesome';
+        transition-delay: .2s;
+        transition: all .3s ease-out;
+
+      }
+    }
+    &:checked + span {
+
+      &:before {
+        border: 2px solid @checkbox-color;
+
+      }
+      &:after {
+        content: '\f00c';
+        color: @checkbox-color;
+      }
+    }
+  }
+}
+
+
+/* CHECKBOX BIG */
+
+.switch-big
+{
+  border: 2px solid @checkbox-color;
+  border-radius: 4px;
+  display: table;
+  font-size: 0;
+  margin: 0 auto;
+
+  & input {
+    display: none;
+  }
+
+  &--input + label
+  {
+    background-color:#fff ;
+    color:@checkbox-color;
+  }
+
+  &--input:checked + label
+  {
+    background-color: @checkbox-color;
+    color:#fff;
+  }
+
+  &--label
+  {
+    display: table-cell;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    background-color: #fff;
+    color: @checkbox-color;
+    font-size: 16px;
+  }
+}

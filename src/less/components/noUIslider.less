@@ -1,0 +1,123 @@
+/*_____ NOUI SLIDER _____*/
+
+.steps
+{
+	padding: 10px;
+	position: relative;
+	&__body
+	{
+		font-size: 0;
+ 		padding: 5px 10px 5px 10px;
+ 		.steps__pill, .steps__range
+ 		{
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+ 		}
+	}
+
+	&__legend
+	{
+		padding: 5px 0;
+	}
+
+
+	&__range{
+		background-color: #e6e9ed;
+		height: 3px;
+		width: 215px;
+	}
+
+	&__pill
+	{
+		padding: 6px;
+		border-radius: 15px;
+		background-color: #e6e9ed;
+		border:4px solid #fff;
+		top:7px;
+
+		&--start
+		{
+			background-color:#fc6e51;
+		}
+
+		&--active
+		{
+			position: absolute;
+			left: 20px;
+  			top: 15px;
+			background-color: #fc6e51;
+		}
+	}
+}
+
+/***************************
+******Range-Slider**********
+***************************/
+.rangeslider
+{
+	&-wrap
+	{
+  		padding: 35px 20px;
+	}
+
+	.noUi-handle
+	{
+	  width: 18px;
+	  height: 18px;
+	  border-radius: 10px;
+	  border: 2px solid #fff;
+	  background-color: #fc6e51;
+	  position: relative;
+	  box-shadow: none;
+	  cursor: pointer;
+	  left: -7px;
+	  &:before{
+		display: none;
+	  }
+	  &:after{
+	  	display: none;
+	  }
+	}
+
+	.noUi-connect
+	{
+	  background-color: #fc6e51;
+	  box-shadow: none;
+	}
+	&.noUi-horizontal
+	{
+	  	height: 8px;
+	}
+
+	.noUi-base
+	{
+		background-color:#e6e9ed;
+	}
+
+	.noUi-background
+	{
+		background-color:#e6e9ed;
+	}
+
+	&-tooltip
+	{
+	  position: absolute;
+	  bottom: 20px;
+	  min-width: 60px;
+	  margin-left: -15px;
+	  text-align: center;
+	}
+}
+.noUi-target {
+  border-color: #e6e9ed;
+}
+
+#range_lower
+{
+	display: none;
+}
+#range_upper
+{
+    display: none;
+}

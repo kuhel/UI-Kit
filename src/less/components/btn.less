@@ -1,0 +1,76 @@
+/*_____ BUTTONS _____*/
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: @green-color;
+  box-shadow: 0 3px 0 0 @green-shadow;
+
+
+
+  &:active,
+  &.active {
+    top: 3px;
+    box-shadow: none;
+    background-color: @green-color;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: @light-green-color;
+    box-shadow: 0 3px 0 0 @light-green-shadow;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--small {
+    padding: 5px 30px;
+  }
+
+  &--dark {
+    background-color: @dark-color;
+    box-shadow: 0 3px 0 0 @dark-shadow;
+
+    &:hover,
+    &.hover {
+      background-color: @light-dark-color;
+      box-shadow: 0 3px 0 0 @light-dark-shadow;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: none;
+      background-color: @dark-color;
+    }
+  }
+
+  &--warning {
+    background-color: @warning-color;
+    box-shadow: 0 3px 0 0 @warning-shadow;
+
+    &:hover,
+    &.hover {
+      background-color: @light-warning-color;
+      box-shadow: 0 3px 0 0 @light-warning-shadow;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: none;
+      background-color: @warning-color;
+    }
+  }
+}

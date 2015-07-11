@@ -1,0 +1,122 @@
+/*_____ VARIABLES _____*/
+
+
+//Colors
+@bg-color: #f0f2f5;
+@grid-color: #b3d4f9;
+
+@green-color: #a0d468;
+@green-shadow: #8bc152;
+@light-green-color:  lighten(@green-color, 10%);
+@light-green-shadow: lighten(@green-shadow, 10%);
+
+
+@dark-color: #536167;
+@dark-shadow: #3b4549;
+@light-dark-color:  lighten(@dark-color, 10%);
+@light-dark-shadow: lighten(@dark-shadow, 10%);
+
+
+@warning-color: #fc6e51;
+@warning-shadow: #e3573b;
+@light-warning-color:  lighten(@warning-color, 10%);
+@light-warning-shadow: lighten(@warning-shadow, 10%);
+
+@grey-line:#d8dadc;
+@grey-checkbox:#eaeaea;
+@grey-disabled:#f8f8f8;
+@color-tag:#536167;
+@color-pagination-slider:#ffcabf;
+
+//Font
+@font-family-main:'Roboto', sans-serif;
+
+//Font Sizes
+@font-size-h1:32px;
+@font-size-h2: round(@font-size-h1*0.875);
+@font-size-h3: round(@font-size-h1*0.6875);
+@font-size-h4: round(@font-size-h1*0.5);
+@font-size-base:15px;
+@line-height-base:22px;
+
+
+//Forms
+@color-input-sucess:#cff3aa;
+@color-input-error:#f2adad;
+@checkbox-color: #fc6e51;
+
+
+//Seclect2
+@select2-option-bg-color: #fc6e51;
+@select2-border-color: #eaeaea;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         30px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
