@@ -977,6 +977,9 @@ a.hover {
   left: 0;
   right: 0;
   margin: auto;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 0.5s ease-out, transform 0.5s ease;
 }
 .img__zoom img {
   border-radius: 6px;
@@ -984,6 +987,10 @@ a.hover {
 }
 .img__zoom:hover .fade--black {
   opacity: 0.5;
+}
+.img__zoom:hover:after {
+  opacity: 1;
+  transform: scale(1);
 }
 .img__zoom:hover img {
   transform: scale(1.2);

@@ -228,7 +228,7 @@
 			}, r.interval)
 		})
 	};
-	$("#progress").progressbarAnimation()
+	$('.progress-bar__percent').on('click', $("#progress").progressbarAnimation());
 }), $(document).ready(function() {
 	$(function() {
 		$("#slides").slides({
