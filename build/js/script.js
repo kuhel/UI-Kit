@@ -228,7 +228,7 @@
 			}, r.interval)
 		})
 	};
-	$('.progress-bar__percent').on('click', $("#progress").progressbarAnimation());
+	$('.progress-bar__percent').on('click', $("#progress	").progressbarAnimation());
 }), $(document).ready(function() {
 	$(function() {
 		$("#slides").slides({
@@ -274,4 +274,23 @@
 			console.log(e), "20px" == e ? ($(".steps__pill--half").css("background-color", "#fc6e51"), $(".steps__pill--finish").css("background-color", "#e6e9ed"), $(".steps__range--start").css("background-color", "#fc6e51"), $(".steps__range--finish").css("background-color", "#e6e9ed"), $(".steps__pill--active").css("left", "255px")) : "255px" == e ? ($(".steps__pill--half").css("background-color", "#fc6e51"), $(".steps__pill--finish").css("background-color", "#fc6e51"), $(".steps__range--start").css("background-color", "#fc6e51"), $(".steps__range--finish").css("background-color", "#fc6e51"), $(".steps__pill--active").css("left", "487px")) : "487px" == e && ($(".steps__pill--half").css("background-color", "#fc6e51"), $(".steps__pill--finish").css("background-color", "#e6e9ed"), $(".steps__range--start").css("background-color", "#fc6e51"), $(".steps__range--finish").css("background-color", "#e6e9ed"), $(".steps__pill--active").css("left", "255px"))
 		})
 	}), $(".js-example-basic-single").select2({ width: '100%' , minimumResultsForSearch: Infinity });
+
+
+	var $star_rating = $('.star-rating .star');
+	var SetRatingStar = function() {
+		return $star_rating.each(function() {
+		if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
+			return $(this).addClass('star--active');
+		} else {
+			return $(this).removeClass('star--active');
+		}
+		});
+	};
+
+	$star_rating.on('click', function() {
+		$star_rating.siblings('input.rating-value').val($(this).data('rating'));
+		return SetRatingStar();
+	});
+
+	SetRatingStar();
 });

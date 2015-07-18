@@ -1,0 +1,94 @@
+// main: ../style.less
+
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 1px 6px;
+  font-size: @font-size-base;
+  color: @badge-color;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: @badge-bg;
+  border-radius: @badge-border-radius;
+  float: right;
+  &.badge-transparent{
+    color: @badge-color-transparent;
+    background: transparent;
+  }
+  &:empty {
+    display: none;
+  }
+}
+.message-nav{
+  background: @block-rounded-bg;
+  border-radius: @border-radius-base;
+}
+.message-nav__title{
+  font-size: ceil((@font-size-base * 1.2));
+  color: @nav-title-color;
+  padding: @padding-base-vertical*2 @padding-base-horizontal;
+}
+.message-nav__bottom{
+  padding: @padding-base-vertical*2 @padding-base-horizontal;
+  & a{
+    color: #444;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.message-nav__list{
+  border-top: 1px solid @nav-border-color;
+  margin: 0;
+  padding: 0;
+  & a{
+    color: @font-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  & .message-nav__item{
+    border-bottom: 1px solid @nav-border-color;
+    display: block;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    &:hover{
+      background: @nav-hover-bg;
+    }
+    &:before{
+      content: "";
+      display: inline-block;
+      background-image: @sprite-path;
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 15px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    &.message-nav__item--new:before{
+      background-position: 0 -54px;
+    }
+    &.message-nav__item--important:before{
+      background-position:  0 -30px;
+    }
+    &.message-nav__item--work:before{
+      background-position:  0 -74px;
+    }
+    &.message-nav__item--spam:before{
+      background-position: 0 -97px;
+    }
+    &.message-nav__item--garbage:before{
+      background-position: 0 -171px;
+    }
+  }
+  & .message-nav__subitem{
+     display: block;
+     padding: @padding-base-vertical 0 0 @padding-base-horizontal ;
+  }
+
+}

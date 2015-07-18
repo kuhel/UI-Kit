@@ -1,0 +1,22 @@
+// main: ../style.less
+
+
+.star-rating {
+  & .star{
+  	background: @sprite-path no-repeat 0 -121px;
+  	cursor: pointer;
+  	display: inline-block;
+    vertical-align: middle;
+  	width: 16px;
+  	height: 16px;
+
+  	&.star--active{
+
+  		background-position: 0 -146px;
+  	}
+  }
+  & label{
+    line-height: 16px;
+  	margin-right: 5px;
+  }
+}
