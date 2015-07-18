@@ -4,8 +4,8 @@
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 1px 6px;
-  font-size: @font-size-base;
+  padding: 3px 9px;
+  font-size: 12px;
   color: @badge-color;
   vertical-align: baseline;
   white-space: nowrap;
@@ -21,23 +21,28 @@
     display: none;
   }
 }
-.message-nav{
+.message-nav {
   background: @block-rounded-bg;
   border-radius: @border-radius-base;
-}
-.message-nav__title{
-  font-size: ceil((@font-size-base * 1.2));
-  color: @nav-title-color;
-  padding: @padding-base-vertical*2 @padding-base-horizontal;
-}
-.message-nav__bottom{
-  padding: @padding-base-vertical*2 @padding-base-horizontal;
-  & a{
-    color: #444;
-    text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    &__sublist {
+      margin-left: 2em;
+    }
+
+  &__title{
+    font-size: ceil((@font-size-base * 1.2));
+    color: @nav-title-color;
+    padding: @padding-base-vertical*2 @padding-base-horizontal;
+  }
+  &__bottom{
+    padding: @padding-base-vertical*2 @padding-base-horizontal;
+    & a{
+      color: #db5286;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -82,7 +87,7 @@
     &.message-nav__item--spam:before{
       background-position: 0 -97px;
     }
-    &.message-nav__item--garbage:before{
+    &.message-nav__item--trash:before{
       background-position: 0 -171px;
     }
   }

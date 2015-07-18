@@ -2158,8 +2158,8 @@ form .input.input__error input {
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 1px 6px;
-  font-size: 15px;
+  padding: 3px 9px;
+  font-size: 12px;
   color: #ffffff;
   vertical-align: baseline;
   white-space: nowrap;
@@ -2179,6 +2179,9 @@ form .input.input__error input {
   background: #ffffff;
   border-radius: 6px;
 }
+.message-nav__sublist {
+  margin-left: 2em;
+}
 .message-nav__title {
   font-size: 18px;
   color: #374c78;
@@ -2188,7 +2191,7 @@ form .input.input__error input {
   padding: 12px 12px;
 }
 .message-nav__bottom a {
-  color: #444;
+  color: #db5286;
   text-decoration: none;
 }
 .message-nav__bottom a:hover {
@@ -2236,7 +2239,7 @@ form .input.input__error input {
 .message-nav__list .message-nav__item.message-nav__item--spam:before {
   background-position: 0 -97px;
 }
-.message-nav__list .message-nav__item.message-nav__item--garbage:before {
+.message-nav__list .message-nav__item.message-nav__item--trash:before {
   background-position: 0 -171px;
 }
 .message-nav__list .message-nav__subitem {
